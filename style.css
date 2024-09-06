@@ -1,0 +1,207 @@
+/* showdomilhao.css */
+
+/* Importa a fonte Chakra Petch do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/* Cores Primárias */
+:root {
+  --preto: #000;
+  --branco: #fff;
+  --azul-escuro: #2274e0;
+  --azul-claro: #52c6d5;
+  --dourado: #ffd700;
+  --vermelho: #e31f1f;
+  --verde: #5de41e;
+  --cinza-claro: #f2f2f2;
+}
+
+/* Estilos Gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--azul-escuro);
+  color: var(--cinza-claro);
+  padding: 0;
+  margin: 0;
+}
+
+.template {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+aside {
+  flex: 0 0 250px;
+  background: rgb(77, 201, 212);
+  background: linear-gradient(
+    180deg,
+    rgba(77, 201, 212, 1) 0%,
+    rgba(82, 207, 224, 1) 100%
+  );
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos Específicos para Elementos */
+h1 {
+  color: var(--dourado);
+  text-align: center;
+}
+
+main {
+  flex: 1;
+  height: calc(100vh - 50px);
+}
+
+.game {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pergunta {
+  background-color: var(--vermelho);
+  color: var(--branco);
+  display: block;
+  padding: 20px;
+  border: 3px solid var(--branco);
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-style: italic;
+  text-shadow: 1px 1px 1px var(--preto);
+  width: 100%;
+}
+
+.opcoes {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.alternativa {
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  color: var(--branco);
+  background-color: var(--vermelho);
+  border: 2px solid var(--branco);
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px var(--preto);
+  transition: 0.2s ease-in background-color;
+}
+
+.opcoes.desativado .alternativa {
+  pointer-events: none;
+}
+
+.alternativa:hover {
+  box-shadow: 2px 2px 2px var(--preto);
+}
+
+.alternativa .detalhe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  color: var(--azul-escuro);
+  background-color: var(--branco);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.alternativa.correta {
+  background-color: var(--verde);
+}
+
+.alternativa.selecionada {
+  background-color: var(--dourado);
+  color: var(--azul-escuro);
+  font-weight: bold;
+}
+
+.alternativa.incorreta {
+  background-color: var(--vermelho);
+  color: var(--branco);
+}
+
+.possibilidades {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.valor {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.valor .numeros,
+.valor .erro {
+  background-color: var(--dourado);
+  color: var(--vermelho);
+  font-weight: bold;
+  font-size: 25px;
+  padding: 4px 8px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px var(--preto);
+  box-shadow: 1px 1px 2px var(--preto);
+}
+
+.valor .detalhe {
+  margin: 4px 0 0;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px var(--preto);
+}
+
+.botoes {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.botoes .botao {
+  background-color: var(--dourado);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 1px 2px var(--preto);
+  color: var(--azul-escuro);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 12px;
+  margin: 16px 0;
+  visibility: hidden;
+  text-shadow: 1px 1px 1px var(--preto);
+  transition: 0.2s ease color;
+  position: absolute;
+  top: 1px;
+}
+
+.botao.show {
+  visibility: visible;
+}
+
+.botao:hover {
+  color: var(--vermelho);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
