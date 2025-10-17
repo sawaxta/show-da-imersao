@@ -1,142 +1,122 @@
 let dados = [
   {
-    pergunta: "Quem descobriu o Brasil?",
+    pergunta:
+      "Ao configurar o CPJ-3C, entender a lógica de interconexão entre módulos é crucial. Qual a principal razão para isso?",
     valor: 1000,
     alternativas: [
-      "Cristóvão Colombo",
-      "Vasco da Gama",
-      "Casimiro Miguel",
-      "Pedro Álvares Cabral",
+      "Para poder desenvolver novos módulos personalizados.",
+      "Para garantir que as parametrizações feitas em um módulo (ex: Tabelas) reflitam corretamente em outros (ex: Relatórios, Processos).",
+      "Para otimizar a velocidade de acesso ao banco de dados.",
+      "Para escolher a melhor versão do software (G ou H) para o escritório.",
     ],
-    resposta: 3,
-  },
-  {
-    pergunta: "Qual o maior país do mundo em área?",
-    valor: 2000,
-    alternativas: ["Rússia", "Canadá", "China", "Estados Unidos"],
-    resposta: 0,
-  },
-  {
-    pergunta: "Qual o elemento químico mais abundante no universo?",
-    valor: 3000,
-    alternativas: ["Oxigênio", "Hidrogênio", "Hélio", "Carbono"],
     resposta: 1,
   },
   {
-    pergunta: "Qual a capital da Austrália?",
-    valor: 4000,
-    alternativas: ["Sydney", "Melbourne", "Canberra", "Perth"],
-    resposta: 2,
+    pergunta:
+      "Descreva sucintamente qual a importância de um técnico conhecer as diferenças de funcionalidades ou configuração entre as versões do CPJ-3C (como a G e a H) ao dar suporte ou realizar uma implantação.",
+    valor: 2000,
+    tipo: "dissertativa",
   },
   {
-    pergunta: "Quem pintou a Mona Lisa?",
+    pergunta:
+      "Onde, geralmente, um técnico encontraria as opções para definir preferências globais do sistema, como formatos de data ou configurações padrão de usuário?",
+    valor: 3000,
+    alternativas: [
+      "Diretamente no cadastro de cada processo.",
+      'Em um menu específico de "Configurações", "Preferências" ou "Administração" do sistema.',
+      "Dentro das opções de parametrização de cada Tabela.",
+      "Exclusivamente através de scripts no banco de dados.",
+    ],
+    resposta: 1,
+  },
+  {
+    pergunta:
+      "Um escritório precisa que todos os novos usuários criados no CPJ-3C tenham, por padrão, um nível específico de acesso a relatórios financeiros. Descreva os passos gerais que um técnico seguiria para tentar configurar essa preferência padrão no sistema.",
+    valor: 4000,
+    tipo: "cenário",
+  },
+  {
+    pergunta:
+      "Qual a principal finalidade dos 'Campos Alteráveis' (ou Campos Extras) no CPJ-3C?",
     valor: 5000,
     alternativas: [
-      "Vincent van Gogh",
-      "Pablo Picasso",
-      "Leonardo da Vinci",
-      "Michelangelo",
+      "Alterar o nome dos campos padrão do sistema.",
+      "Criar campos adicionais para armazenar informações específicas do escritório que não existem nos campos padrão.",
+      "Definir o formato visual (cores, fontes) dos campos nas telas.",
+      "Permitir que usuários finais alterem a estrutura do banco de dados.",
     ],
-    resposta: 2,
-  },
-  {
-    pergunta: "Qual a fórmula química da água?",
-    valor: 10000,
-    alternativas: ["H2O2", "CO2", "NaCl", "H2O"],
-    resposta: 3,
-  },
-  {
-    pergunta: "Em qual ano ocorreu a Proclamação da República no Brasil?",
-    valor: 20000,
-    alternativas: ["1889", "1822", "1500", "1922"],
-    resposta: 0,
-  },
-  {
-    pergunta: "Qual o maior órgão do corpo humano?",
-    valor: 30000,
-    alternativas: ["Coração", "Pulmão", "Fígado", "Pele"],
-    resposta: 3,
-  },
-  {
-    pergunta: "Qual o nome do primeiro homem a pisar na Lua?",
-    valor: 40000,
-    alternativas: [
-      "Buzz Aldrin",
-      "Neil Armstrong",
-      "Yuri Gagarin",
-      "Alan Shepard",
-    ],
-    resposta: 1,
-  },
-  {
-    pergunta: "Qual é a unidade de medida da corrente elétrica?",
-    valor: 50000,
-    alternativas: ["Volt", "Ampère", "Watt", "Ohm"],
     resposta: 1,
   },
   {
     pergunta:
-      "Qual a teoria que unifica a gravidade com as demais forças fundamentais da natureza?",
+      'Explique a diferença técnica fundamental entre um "Campo Alterável" e um "Formato" no contexto de personalização de campos do CPJ-3C. Quando você optaria por usar um em vez do outro?',
+    valor: 10000,
+    tipo: "dissertativa",
+  },
+  {
+    pergunta:
+      'O escritório precisa registrar um "Código Interno de Cliente" em todos os cadastros de Pessoas/Empresas. Qual recurso de personalização (Campo Alterável ou Formato) seria mais indicado e por quê? Descreva brevemente como você o configuraria na tela de Pessoas.',
+    valor: 20000,
+    tipo: "cenário",
+  },
+  {
+    pergunta:
+      'A parametrização incorreta de uma tabela essencial, como "Tipos de Ação", pode causar qual tipo de problema?',
+    valor: 30000,
+    alternativas: [
+      "Lentidão geral no sistema.",
+      "Impossibilidade de fazer login no CPJ-3C.",
+      "Inconsistência nos dados, dificuldade na filtragem de processos e erros em relatórios.",
+      "Perda de conexão com o banco de dados.",
+    ],
+    resposta: 2,
+  },
+  {
+    pergunta:
+      "Cite três exemplos de tabelas que são comumente parametrizadas durante a implantação do CPJ-3C e explique por que a correta parametrização delas é importante.",
+    valor: 40000,
+    tipo: "dissertativa",
+  },
+  {
+    pergunta:
+      "Um novo tipo de recurso judicial começou a ser utilizado frequentemente pelo escritório. Descreva os passos técnicos gerais para adicionar essa nova opção na tabela correspondente (ex: Tabela de Fases ou Andamentos) dentro do CPJ-3C.",
+    valor: 50000,
+    tipo: "cenário",
+  },
+  {
+    pergunta:
+      "Por que é fundamental que um técnico oriente os usuários sobre os padrões de alimentação de dados no CPJ-3C?",
     valor: 100000,
     alternativas: [
-      "Teoria das cordas",
-      "Relatividade Geral",
-      "Mecânica Quântica",
-      "Modelo Padrão",
-    ],
-    resposta: 0,
-  },
-  {
-    pergunta: "Qual a capital da Islândia?",
-    valor: 200000,
-    alternativas: ["Reykjavik", "Oslo", "Helsinki", "Copenhague"],
-    resposta: 0,
-  },
-  {
-    pergunta:
-      "Qual o nome do teorema que estabelece a relação entre a força eletromotriz induzida em um circuito e a variação do fluxo magnético que o atravessa?",
-    valor: 300000,
-    alternativas: [
-      "Teorema de Pitágoras",
-      "Lei de Ohm",
-      "Lei de Faraday",
-      "Lei de Gauss",
-    ],
-    resposta: 2,
-  },
-  {
-    pergunta:
-      "Qual a principal diferença entre uma reação química e uma nuclear?",
-    valor: 400000,
-    alternativas: [
-      "A velocidade da reação",
-      "As partículas envolvidas",
-      "A energia liberada",
-      "O estado físico dos reagentes",
+      "Para aumentar o espaço de armazenamento necessário no servidor.",
+      "Para garantir que os dados sejam consistentes, facilitando buscas, filtros e a geração de relatórios confiáveis.",
+      "Para permitir que o software funcione offline.",
+      "Para personalizar a interface gráfica para cada usuário.",
     ],
     resposta: 1,
   },
   {
-    pergunta: "Qual a constante de Planck?",
-    valor: 500000,
-    alternativas: [
-      "6.626 x 10^-34 J.s",
-      "3.00 x 10^8 m/s",
-      "6.022 x 10^23 mol^-1",
-      "1.602 x 10^-19 C",
-    ],
-    resposta: 0,
+    pergunta:
+      'Qual o impacto direto da má qualidade na alimentação do campo "Valor da Causa" nos processos para funcionalidades como relatórios gerenciais ou BI?',
+    valor: 200000,
+    tipo: "dissertativa",
   },
   {
     pergunta:
-      "Em que dia nasceu e em que dia foi registrado o Presidente Luis Inácio Lula da Silva?",
-    valor: 1000000,
+      "Ao configurar permissões de acesso para um novo grupo de usuários (ex: Estagiários), qual o princípio mais importante a ser seguido?",
+    valor: 300000,
     alternativas: [
-      "6 e 27 de outubro",
-      "8 e 27 de outubro",
-      "9 e 26 de outubro",
-      "7 e 23 de outubro",
+      "Conceder acesso total e remover permissões conforme necessário.",
+      "Conceder o mínimo de permissões necessárias para a função (princípio do menor privilégio).",
+      "Copiar as permissões do grupo de Sócios.",
+      "Permitir que os próprios estagiários definam suas permissões.",
     ],
-    resposta: 0,
+    resposta: 1,
+  },
+  {
+    pergunta:
+      "O escritório deseja que a captura automática de andamentos funcione para um tribunal específico que acabou de ser disponibilizado para integração. Quais seriam os passos gerais ou verificações que um técnico realizaria no CPJ-3C para configurar ou habilitar essa integração?",
+    valor: 400000,
+    tipo: "cenário",
   },
 ];
